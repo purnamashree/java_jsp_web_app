@@ -13,7 +13,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//@WebServlet("/emp")
+/*@WebServlet(
+        name = "EmployeeController",
+        urlPatterns = {"/employee"}
+)*/
 public class EmployeeController extends HttpServlet{
 
     private static final long serialVersionUID = 1L;

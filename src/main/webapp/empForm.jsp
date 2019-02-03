@@ -3,9 +3,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.min.js"></script>
     <title>Employee CRUD Application</title>
 </head>
 <body>
+    <div class="container">
     <center>
         <h1>Employee CRUD Application</h1>
         <h2>
@@ -22,7 +25,7 @@
         <c:if test="${emp == null}">
             <form action="insert" method="post">
         </c:if>
-        <table border="1" cellpadding="5">
+        <table border="1" cellpadding="5" >
             <caption>
                 <h2>
                     <c:if test="${emp != null}">
@@ -67,6 +70,7 @@
             </tr>
         </table>
         </form>
+    </div>
     </div>
 </body>
 </html>

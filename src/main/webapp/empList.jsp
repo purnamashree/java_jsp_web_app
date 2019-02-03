@@ -3,9 +3,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.min.js"></script>
     <title>Employee CRUD application</title>
 </head>
 <body>
+    <div class="container">
     <center>
         <h1>Employee CRUD application</h1>
         <h2>
@@ -38,6 +41,7 @@
                 </tr>
             </c:forEach>
         </table>
+    </div>
     </div>
 </body>
 </html>
