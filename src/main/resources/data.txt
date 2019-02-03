@@ -1,0 +1,11 @@
+CREATE DATABASE 'company';
+USE company;
+
+CREATE TABLE `employee` (
+  `emp_id` INT(11) NOT NULL AUTO_INCREMENT,
+  `first_name` VARCHAR(50) ,
+  `last_name` VARCHAR(50) ,
+  `title` VARCHAR(128),
+  PRIMARY KEY (`emp_id`),
+  UNIQUE KEY `emp_id_UNIQUE` (`emp_id`)
+) ENGINE=INNODB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1
