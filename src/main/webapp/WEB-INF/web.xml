@@ -8,13 +8,33 @@
   <display-name>Archetype Created Web Application</display-name>
 
   <servlet>
-    <servlet-name>ControllerServlet</servlet-name>
+    <servlet-name>EmployeeController</servlet-name>
     <servlet-class>com.venkat.controller.EmployeeController</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>ControllerServlet</servlet-name>
+    <servlet-name>EmployeeController</servlet-name>
     <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UploadController</servlet-name>
+    <servlet-class>com.venkat.controller.UploadController</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>UploadController</servlet-name>
+    <url-pattern>/file_uploader</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>FileUploadController</servlet-name>
+    <servlet-class>com.venkat.controller.UploadController</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>FileUploadController</servlet-name>
+    <url-pattern>/uploader</url-pattern>
   </servlet-mapping>
 
   <error-page>
