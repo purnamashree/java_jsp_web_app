@@ -13,12 +13,23 @@ public class DBConnection implements Serializable {
 
     private DBConnection(){}
 
+    private Properties readDBProps2() throws IOException{
+
+        //InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("application.properties");
+        ClassLoader loader = Thread.currentThread().getContextClassLoader();
+        Properties properties = new Properties();
+        try(InputStream inputStream = loader.getResourceAsStream("application.properties")){
+            properties.load(inputStream);
+        }
+        return properties;
+
+    }
+
     private Properties readDBProps() throws IOException{
 
-        InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("application.properties");
         Properties properties = new Properties();
-        properties.load(inputStream);
-        return properties;
+        properties.load(new FileInputStream("src/main/resources/application.properties"));
+        return  properties;
 
     }
 
