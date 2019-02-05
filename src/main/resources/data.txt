@@ -1,5 +1,5 @@
-CREATE DATABASE 'company';
-USE company;
+CREATE DATABASE 'resumes_repo';
+USE resumes_repo;
 
 CREATE TABLE `employee` (
   `emp_id` INT(11) NOT NULL AUTO_INCREMENT,
@@ -9,3 +9,12 @@ CREATE TABLE `employee` (
   PRIMARY KEY (`emp_id`),
   UNIQUE KEY `emp_id_UNIQUE` (`emp_id`)
 ) ENGINE=INNODB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1
+
+
+CREATE TABLE upload_resumes (
+`resume_id` INT(11) NOT NULL AUTO_INCREMENT,
+`name` VARCHAR(50),
+`resume_content` LONGBLOB,
+PRIMARY KEY (`resume_id`),
+UNIQUE KEY `resume_id_UNIQUE` (`resume_id`)
+)ENGINE=INNODB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1
