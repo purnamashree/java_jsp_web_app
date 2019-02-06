@@ -18,7 +18,7 @@ import java.util.Collection;
 import java.util.List;
 
 @MultipartConfig
-public class UploadController extends HttpServlet {
+public class ResumeUploaderController extends HttpServlet {
 
     private ResumeUploadService resumeService;
 
@@ -47,7 +47,8 @@ public class UploadController extends HttpServlet {
         String action = request.getServletPath();
         try {
             if (action.contains("/file_uploader")) {
-                RequestDispatcher dispatcher = request.getRequestDispatcher("upload2.jsp");
+                //RequestDispatcher dispatcher = request.getRequestDispatcher("upload2.jsp");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("upload.jsp");
                 dispatcher.forward(request, response);
             } else if(action.contains("/uploader")) {
                 insertEmp(request, response);
@@ -117,13 +118,11 @@ public class UploadController extends HttpServlet {
 
         Resume resume = resumeService.getResume(id);
 
-        response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         String filename = resume.getName();
         InputStream inputStream = resume.getContent();
         response.setContentType("APPLICATION/OCTET-STREAM");
-        response.setHeader("Content-Disposition", "attachment; filename=\""
-                + filename + "\"");
+        response.setHeader("Content-Disposition", "attachment; filename=\"" + filename + "\"");
 
         int i;
         while ((i = inputStream.read()) != -1) {

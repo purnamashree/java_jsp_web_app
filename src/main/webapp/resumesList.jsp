@@ -12,9 +12,9 @@
     <center>
         <h1>Resume Upload application</h1>
         <h2>
-            <a href="/new">Upload Resumes</a>
+            <a href="/file_uploader">Upload Resumes</a>
             &nbsp;&nbsp;&nbsp;
-            <a href="/list">List All Resumes</a>
+            <a href="/resume_list">List All Resumes</a>
 
         </h2>
     </center>

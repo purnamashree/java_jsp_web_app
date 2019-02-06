@@ -19,7 +19,7 @@
 
   <servlet>
     <servlet-name>UploadController</servlet-name>
-    <servlet-class>com.venkat.controller.UploadController</servlet-class>
+    <servlet-class>com.venkat.controller.ResumeUploaderController</servlet-class>
   </servlet>
 
   <servlet-mapping>
@@ -29,7 +29,7 @@
 
   <servlet>
     <servlet-name>FileUploadController</servlet-name>
-    <servlet-class>com.venkat.controller.UploadController</servlet-class>
+    <servlet-class>com.venkat.controller.ResumeUploaderController</servlet-class>
   </servlet>
 
   <servlet-mapping>
